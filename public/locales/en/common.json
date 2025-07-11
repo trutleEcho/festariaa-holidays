@@ -1,0 +1,39 @@
+{
+  "welcome": "Welcome",
+  "home": "Home",
+  "about": "About",
+  "contact": "Contact",
+  "banner": {
+    "text1": "More Than A Ride",
+    "text2": "A Travel Companion",
+    "text3": "Your journey, our family’s care....",
+    "text4": "“Your Home on Every Journey”",
+    "text5": "Whether you’re heading to your hometown or discovering new places, ",
+    "text6": "Gaurishankar Tours & Travels ensures every ride is warm, safe, and comforting — ",
+    "text7": "just like home."
+  },
+  "about-screen": {
+    "title": "Gaurishankar Tours & Travels",
+    "description": "Reliable, comfortable, and homely travel — across every journey.",
+    "para1": "At Gaurishankar Tours & Travels, our mission is to make every ride feel like home. Whether you're heading to your hometown or exploring new destinations, we ensure comfort, safety, and a warm experience in every journey.",
+    "para2": "From personal trips to group travel, our services are trusted by thousands — because we treat every passenger like family."
+  },
+  "contact-screen": {
+    "title": "Contact Us",
+    "description": "Reach out to Gaurishankar Tours & Travels"
+  },
+  "vehicles-section": {
+    "title": "Our Vehicles",
+    "description": "Select your travel companion from our range of vehicles.",
+    "button": "Contact Us"
+  },
+  "journey-steps": {
+    "title": "Your Journey with Us",
+    "step1_title": "Select a Car",
+    "step1_description": "Choose the perfect vehicle for your comfort and journey.",
+    "step2_title": "Start Your Journey",
+    "step2_description": "Begin your trip with confidence and direction.",
+    "step3_title": "Enjoy the Trip",
+    "step3_description": "Sit back and relax as we take care of your ride."
+  }
+}
