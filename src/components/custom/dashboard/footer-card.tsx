@@ -1,4 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card";
+import Link from "next/link";
 
 export default function FooterCard() {
     return (
@@ -11,9 +12,9 @@ export default function FooterCard() {
                     <p className="text-sm sm:text-base text-muted-foreground mt-3">
                         If you have any questions or feedback, please don’t hesitate to contact us.
                     </p>
-                    <p className="mt-4 text-base font-medium text-primary">
+                    <Link href="/contact" className="mt-4 text-base font-medium text-primary">
                         Contact us to learn more.
-                    </p>
+                    </Link>
                 </CardContent>
             </Card>
         </section>

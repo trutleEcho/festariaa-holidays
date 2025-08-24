@@ -1,21 +1,21 @@
 import TheNavbar from "@/components/custom/common/the-navbar";
 
 export const metadata = {
-    title: 'GS | Contact Us',
-    description: 'Contact Gaurishankar Tours & Travels for bookings, queries, or partnerships.',
+    title: 'Festariaa | Contact Us',
+    description: 'Contact Festariaa holidays for bookings, queries, or partnerships.',
     icons: {
-        icon: '/GS_TnT_32x32.svg',
+        icon: '/Festariaa_TnT_32x32.svg',
     },
-    applicationName: 'Gaurishankar Tours and Travels',
+    applicationName: 'Festariaa holidays',
     authors: [{name: 'Pradyumna Tanksali'}],
     creator: 'Corner Softwares',
     publisher: 'Corner Softwares',
     openGraph: {
-        title: 'GS | Contact Us',
+        title: 'Festariaa | Contact Us',
         description:
-            'Reach out to Gaurishankar Tours & Travels. Whether you need support, want to make a booking, or have general inquiries — we’re here for you.',
+            'Reach out to Festariaa holidays. Whether you need support, want to make a booking, or have general inquiries — we’re here for you.',
         url: 'https://toursandtravels.gauri-shankar.com/contact',
-        siteName: 'GS | Contact',
+        siteName: 'Festariaa | Contact',
         locale: 'en-US',
         type: 'website',
     },

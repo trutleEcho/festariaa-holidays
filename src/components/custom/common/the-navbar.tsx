@@ -4,26 +4,21 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import { useTheme } from "next-themes";
 import { Separator } from "@/components/ui/separator";
 import { useTranslation } from "react-i18next";
 import LanguageSelector from "@/components/custom/common/language-selector";
-import {ThemeToggle} from "@/components/custom/common/theme-toggle";
+import { ThemeToggle } from "@/components/custom/common/theme-toggle";
+import { Menu, X } from "lucide-react"; // icons
 
 export default function TheNavbar() {
-    const { resolvedTheme } = useTheme();
     const [mounted, setMounted] = useState(false);
+    const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     const pathname = usePathname();
     const { t } = useTranslation("common");
 
     useEffect(() => {
         setMounted(true);
     }, []);
-
-    const logoSrc =
-        mounted && resolvedTheme === "dark"
-            ? "/GS_TnT_LIGHT_64x64.svg"
-            : "/GS_TnT_DARK_64x64.svg";
 
     const navLinks = [
         { href: "/", label: t("home") },
@@ -32,31 +27,32 @@ export default function TheNavbar() {
     ];
 
     return (
-        <header className="sticky p-5 z-50 bg-background">
-            <section className="w-full flex flex-row justify-between items-center">
+        <header className="sticky top-0 z-50 bg-background shadow-sm">
+            <section className="w-full flex flex-row justify-between items-center px-5 py-3">
                 {/* Logo */}
                 <div>
                     {mounted && (
                         <Image
-                            src={logoSrc}
+                            src="/logo_2.png"
                             alt="logo"
-                            width={64}
+                            width={124}
                             height={64}
                             priority
+                            className="m-2"
                         />
                     )}
                 </div>
 
-                {/* Navigation Links */}
-                <nav>
-                    <ul className="flex flex-row items-center pt-5 md:gap-4 md:pt-0">
+                {/* Desktop Nav */}
+                <nav className="hidden md:flex">
+                    <ul className="flex flex-row items-center gap-6">
                         {navLinks.map((link) => {
                             const isActive = pathname === link.href;
                             return (
                                 <li key={link.href}>
                                     <Link
                                         href={link.href}
-                                        className={`group relative px-4 py-2 text-base font-medium transition-colors duration-300 ${
+                                        className={`group relative px-2 py-2 text-base font-medium transition-colors duration-300 ${
                                             isActive
                                                 ? "text-primary font-semibold"
                                                 : "text-muted-foreground"
@@ -75,13 +71,48 @@ export default function TheNavbar() {
                     </ul>
                 </nav>
 
-                {/* Language and Theme Toggle */}
-                <div className="flex flex-row gap-4">
+                {/* Language + Theme + Mobile Toggle */}
+                <div className="flex flex-row items-center gap-4">
                     <LanguageSelector />
                     <ThemeToggle />
+
+                    {/* Hamburger button for mobile */}
+                    <button
+                        className="md:hidden p-2 rounded-lg hover:bg-accent"
+                        onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                    >
+                        {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+                    </button>
                 </div>
             </section>
-            <Separator className="w-[95%] my-4" />
+
+            <Separator className="w-[95%] mx-auto" />
+
+            {/* Mobile Menu */}
+            {mobileMenuOpen && (
+                <div className="md:hidden bg-background border-t border-border px-5 py-4 animate-slideDown">
+                    <ul className="flex flex-col gap-4">
+                        {navLinks.map((link) => {
+                            const isActive = pathname === link.href;
+                            return (
+                                <li key={link.href}>
+                                    <Link
+                                        href={link.href}
+                                        onClick={() => setMobileMenuOpen(false)}
+                                        className={`block px-2 py-2 rounded-lg transition-colors ${
+                                            isActive
+                                                ? "text-primary font-semibold"
+                                                : "text-muted-foreground hover:text-foreground"
+                                        }`}
+                                    >
+                                        {link.label}
+                                    </Link>
+                                </li>
+                            );
+                        })}
+                    </ul>
+                </div>
+            )}
         </header>
     );
 }

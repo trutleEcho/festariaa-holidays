@@ -10,7 +10,6 @@ import {
 } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import Image from "next/image";
-import Link from "next/link";
 import {useTranslation} from "react-i18next";
 
 export default function AboutCard() {
@@ -32,18 +31,11 @@ export default function AboutCard() {
             <CardContent className="flex flex-col md:flex-row items-center gap-6">
                 <div className="w-full md:w-1/3 flex justify-center">
                     <Image
-                        src="/GS_TnT_DARk_64x64.svg"
-                        alt="Gaurishankar Logo"
+                        src="/logo.png"
+                        alt="Festariaa Logo"
                         width={200}
                         height={200}
-                        className="rounded-xl object-contain dark:hidden"
-                    />
-                    <Image
-                        src="/GS_TnT_LIGHT_64x64.svg"
-                        alt="Gaurishankar Logo"
-                        width={200}
-                        height={200}
-                        className="rounded-xl object-contain hidden dark:block"
+                        className="rounded-xl object-contain"
                     />
                 </div>
 
@@ -56,33 +48,33 @@ export default function AboutCard() {
             <Separator className="my-4" />
 
             <CardFooter className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
-                <span>© {new Date().getFullYear()} Gaurishankar Tours & Travels</span>
-                <div className="flex items-center gap-2">
-                    <span>Developed by</span>
-                    <Image
-                        src="/CORSW_BG_LIGHT_64x64.svg"
-                        alt="Corner Softwares Logo"
-                        width={28}
-                        height={28}
-                        className="dark:hidden"
-                    />
-                    <Image
-                        src="/CORSW_BG_DARK_64x64.svg"
-                        alt="Corner Softwares Logo"
-                        width={28}
-                        height={28}
-                        className="hidden dark:block"
-                    />
-                    <Link
-                        href="https://corsw.com"
-                        target="_blank"
-                        rel="noreferrer"
-                    >
-                        <span className="underline font-semibold hover:text-foreground">
-                          Corner Softwares
-                        </span>
-                    </Link>
-                </div>
+                <span>© {new Date().getFullYear()} Festariaa holidays</span>
+                {/*<div className="flex items-center gap-2">*/}
+                {/*    <span>Developed by</span>*/}
+                {/*    <Image*/}
+                {/*        src="/CORSW_BG_LIGHT_64x64.svg"*/}
+                {/*        alt="Corner Softwares Logo"*/}
+                {/*        width={28}*/}
+                {/*        height={28}*/}
+                {/*        className="dark:hidden"*/}
+                {/*    />*/}
+                {/*    <Image*/}
+                {/*        src="/CORSW_BG_DARK_64x64.svg"*/}
+                {/*        alt="Corner Softwares Logo"*/}
+                {/*        width={28}*/}
+                {/*        height={28}*/}
+                {/*        className="hidden dark:block"*/}
+                {/*    />*/}
+                    {/*<Link*/}
+                    {/*    href="https://corsw.com"*/}
+                    {/*    target="_blank"*/}
+                    {/*    rel="noreferrer"*/}
+                    {/*>*/}
+                    {/*    <span className="underline font-semibold hover:text-foreground">*/}
+                    {/*      Corner Softwares*/}
+                    {/*    </span>*/}
+                    {/*</Link>*/}
+                {/*</div>*/}
             </CardFooter>
         </Card>
     );

@@ -14,7 +14,6 @@ import {Textarea} from "@/components/ui/textarea";
 import {Button} from "@/components/ui/button";
 import {Separator} from "@/components/ui/separator";
 import Image from "next/image";
-import Link from "next/link";
 import {useTranslation} from "react-i18next";
 
 export default function ContactUsPage() {
@@ -37,35 +36,30 @@ export default function ContactUsPage() {
                     {/* Left: Contact Details */}
                     <div className="space-y-4 text-sm sm:text-base text-muted-foreground">
                         <p>
-                            <strong>Phone:</strong> +91 98765 43210
+                            <strong>Phone:</strong> <a
+                            className="underline" href="tel:+917798619709">+91 77986 19709</a>
                         </p>
                         <p>
-                            <strong>Email:</strong> gaurishankartravels@example.com
+                            <strong>Email:</strong> <a className="underline"
+                                                       href="mailto:festiraaholidays@outlook.com">festiraaholidays@outlook.com</a>
                         </p>
                         <p>
-                            <strong>Address:</strong> 123 Main Street, Hubli, Karnataka
+                            <strong>Address:</strong> Pune
                         </p>
                         <Separator/>
-                        <div>
+                        <div className="flex justify-center">
                             <Image
-                                src="/GS_TnT_LIGHT_LABLE.svg"
-                                alt="Gaurishankar Logo"
+                                src="/logo.png"
+                                alt="Festariaa Logo"
                                 width={200}
                                 height={200}
                                 className="dark:hidden"
-                            />
-                            <Image
-                                src="/GS_TnT_DARK_LABLE.svg"
-                                alt="Gaurishankar Logo"
-                                width={200}
-                                height={200}
-                                className="hidden dark:block"
                             />
                         </div>
                     </div>
 
                     {/* Right: Contact Form */}
-                    <form className="space-y-4">
+                    <form action="https://formsubmit.co/festiraaholidays@outlook.com" method="POST" className="space-y-4">
                         <div className="space-y-2">
                             <Label htmlFor="name">Name</Label>
                             <Input id="name" placeholder="Your Name" required/>
@@ -96,33 +90,33 @@ export default function ContactUsPage() {
 
                 <CardFooter
                     className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
-                    <span>© {new Date().getFullYear()} Gaurishankar Tours & Travels</span>
-                    <div className="flex items-center gap-2">
-                        <span>Developed by</span>
-                        <Image
-                            src="/CORSW_BG_LIGHT_64x64.svg"
-                            alt="Corner Softwares Logo"
-                            width={28}
-                            height={28}
-                            className="dark:hidden"
-                        />
-                        <Image
-                            src="/CORSW_BG_DARK_64x64.svg"
-                            alt="Corner Softwares Logo"
-                            width={28}
-                            height={28}
-                            className="hidden dark:block"
-                        />
-                        <Link
-                            href="https://corsw.com"
-                            target="_blank"
-                            rel="noreferrer"
-                        >
-                            <span className="underline font-semibold hover:text-foreground">
-                              Corner Softwares
-                            </span>
-                        </Link>
-                    </div>
+                    <span>© {new Date().getFullYear()} Festariaa holidays</span>
+                    {/*<div className="flex items-center gap-2">*/}
+                    {/*    <span>Developed by</span>*/}
+                    {/*    <Image*/}
+                    {/*        src="/CORSW_BG_LIGHT_64x64.svg"*/}
+                    {/*        alt="Corner Softwares Logo"*/}
+                    {/*        width={28}*/}
+                    {/*        height={28}*/}
+                    {/*        className="dark:hidden"*/}
+                    {/*    />*/}
+                    {/*    <Image*/}
+                    {/*        src="/CORSW_BG_DARK_64x64.svg"*/}
+                    {/*        alt="Corner Softwares Logo"*/}
+                    {/*        width={28}*/}
+                    {/*        height={28}*/}
+                    {/*        className="hidden dark:block"*/}
+                    {/*    />*/}
+                    {/*    <Link*/}
+                    {/*        href="https://corsw.com"*/}
+                    {/*        target="_blank"*/}
+                    {/*        rel="noreferrer"*/}
+                    {/*    >*/}
+                    {/*        <span className="underline font-semibold hover:text-foreground">*/}
+                    {/*          Corner Softwares*/}
+                    {/*        </span>*/}
+                    {/*    </Link>*/}
+                    {/*</div>*/}
                 </CardFooter>
             </Card>
         </section>

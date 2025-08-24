@@ -15,17 +15,16 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-    title: "GS | Tours and Tarvels",
+    title: "Festariaa Holidays",
     description: "Looking for the best tour and travels around you? Look no further, we have got you covered!",
-    applicationName: "Gaurishankar Tours and Travels",
+    applicationName: "Festariaa holidays",
     authors: [{name: "Pradyumna Tanksali"}],
     creator: "Corner Softwares",
     publisher: "Corner Softwares",
     openGraph: {
-        title: "GS | Tours and Tarvels",
+        title: "Festariaa ",
         description: "Looking for the best tour and travels around you? Look no further, we have got you covered!",
-        url: "https://toursandtravels.gauri-shankar.com",
-        siteName: "GS | Tours and Tarvels",
+        siteName: "Festariaa ",
         locale: "en-US",
         type: "website",
     },
@@ -38,10 +37,6 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en" suppressHydrationWarning>
-        <head>
-            <link rel="icon" href="/GS_TnT_32x32.svg"/>
-            <title>GS | Tours and Travels</title>
-        </head>
         <body className={`${geistSans.variable} ${geistMono.variable} antialiased h-screen`}>
         <Providers>
             {children}

@@ -15,6 +15,7 @@ const languages = [
     { code: "en", label: "English" },
     { code: "kn", label: "ಕನ್ನಡ" },
     { code: "mr", label: "मराठी" },
+    { code: "hi", label: "हिन्दी"}
 ];
 
 export default function LanguageSelector() {

@@ -39,17 +39,9 @@ export default function DashboardBanner() {
                 <CardHeader className="pt-5">
                     <CardTitle className="flex justify-center">
                         <Image
-                            className="dark:hidden w-auto max-w-[250px] sm:max-w-[300px]"
-                            src={"/GS_TnT_DARK_LABLE.svg"}
-                            alt="Gaurishankar Logo"
-                            width={300}
-                            height={256}
-                            priority
-                        />
-                        <Image
-                            className="hidden dark:block w-auto max-w-[250px] sm:max-w-[300px]"
-                            src={"/GS_TnT_LIGHT_LABLE.svg"}
-                            alt="Gaurishankar Logo"
+                            className="w-auto max-w-[250px] sm:max-w-[300px]"
+                            src="/logo.png"
+                            alt="Festariaa Logo"
                             width={300}
                             height={256}
                             priority
