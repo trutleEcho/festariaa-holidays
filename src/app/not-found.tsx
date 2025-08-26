@@ -15,7 +15,7 @@ import { Separator } from "@/components/ui/separator";
 import {Metadata} from "next";
 
 export const metadata: Metadata = {
-    title: "Festariaa | Tours and Tarvels",
+    title: "Festiraa | Tours and Tarvels",
     description: "Opps! The page you're looking for doesn't exist.",
 };
 
@@ -28,7 +28,7 @@ export default function NotFound() {
                     <CardTitle className="flex justify-center">
                         <Image
                             className="dark:hidden w-auto max-w-[70%] sm:max-w-[250px]"
-                            src="/Festariaa_TnT_LIGHT_LABLE.svg"
+                            src="/Festiraa_TnT_LIGHT_LABLE.svg"
                             alt="Label"
                             width={250}
                             height={200}
@@ -36,7 +36,7 @@ export default function NotFound() {
                         />
                         <Image
                             className="hidden dark:block w-auto max-w-[70%] sm:max-w-[250px]"
-                            src="/Festariaa_TnT_DARK_LABLE.svg"
+                            src="/Festiraa_TnT_DARK_LABLE.svg"
                             alt="Label"
                             width={250}
                             height={200}

@@ -34,8 +34,9 @@ export default function DashboardBanner() {
     }, []);
 
     return (
-        <section className="w-full px-4 sm:px-6 md:px-8 py-6 flex justify-center">
-            <Card className="w-full max-w-7xl bg-gradient-to-br from-blue-200 to-blue-500 text-white dark:text-black rounded-xl shadow-md px-4 sm:px-6 md:px-10 py-6">
+        <section className="relative w-full px-4 sm:px-6 md:px-8 py-6 flex justify-center">
+            <video className="absolute inset-0 left-0 w-full h-full object-cover -z-10" src="/hero-vid.mp4" autoPlay loop muted/>
+            <Card className="relative w-full max-w-7xl bg-gradient-to-br from-blue-200/10 to-blue-500 text-white dark:text-black rounded-xl shadow-md px-4 sm:px-6 md:px-10 py-6">
                 <CardHeader className="pt-5">
                     <CardTitle className="flex justify-center">
                         <Image

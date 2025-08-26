@@ -15,16 +15,16 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-    title: "Festariaa Holidays",
+    title: "Festiraa Holidays",
     description: "Looking for the best tour and travels around you? Look no further, we have got you covered!",
-    applicationName: "Festariaa holidays",
+    applicationName: "Festiraa holidays",
     authors: [{name: "Pradyumna Tanksali"}],
     creator: "Corner Softwares",
     publisher: "Corner Softwares",
     openGraph: {
-        title: "Festariaa ",
+        title: "Festiraa ",
         description: "Looking for the best tour and travels around you? Look no further, we have got you covered!",
-        siteName: "Festariaa ",
+        siteName: "Festiraa ",
         locale: "en-US",
         type: "website",
     },

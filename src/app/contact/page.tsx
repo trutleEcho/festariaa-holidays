@@ -21,7 +21,7 @@ export default function ContactUsPage() {
 
 
     return (
-        <section className="w-full max-w-4xl mx-auto p-6">
+        <section className="w-full max-w-4xl mx-auto p-6 mt-32">
             <Card className="rounded-xl shadow-md">
                 <CardHeader className="text-center">
                     <CardTitle className="text-3xl font-bold text-primary">
@@ -37,7 +37,7 @@ export default function ContactUsPage() {
                     <div className="space-y-4 text-sm sm:text-base text-muted-foreground">
                         <p>
                             <strong>Phone:</strong> <a
-                            className="underline" href="tel:+917798619709">+91 77986 19709</a>
+                            className="underline" href="tel:+918263829207">+91 82638 29207</a>
                         </p>
                         <p>
                             <strong>Email:</strong> <a className="underline"
@@ -50,7 +50,7 @@ export default function ContactUsPage() {
                         <div className="flex justify-center">
                             <Image
                                 src="/logo.png"
-                                alt="Festariaa Logo"
+                                alt="Festiraa Logo"
                                 width={200}
                                 height={200}
                                 className="dark:hidden"
@@ -90,7 +90,7 @@ export default function ContactUsPage() {
 
                 <CardFooter
                     className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
-                    <span>© {new Date().getFullYear()} Festariaa holidays</span>
+                    <span>© {new Date().getFullYear()} Festiraa holidays</span>
                     {/*<div className="flex items-center gap-2">*/}
                     {/*    <span>Developed by</span>*/}
                     {/*    <Image*/}

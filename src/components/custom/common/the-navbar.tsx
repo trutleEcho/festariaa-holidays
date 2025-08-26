@@ -6,7 +6,6 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { Separator } from "@/components/ui/separator";
 import { useTranslation } from "react-i18next";
-import LanguageSelector from "@/components/custom/common/language-selector";
 import { ThemeToggle } from "@/components/custom/common/theme-toggle";
 import { Menu, X } from "lucide-react"; // icons
 
@@ -27,19 +26,21 @@ export default function TheNavbar() {
     ];
 
     return (
-        <header className="sticky top-0 z-50 bg-background shadow-sm">
+        <header className="sticky top-0 z-50 bg-background/50 shadow-sm">
             <section className="w-full flex flex-row justify-between items-center px-5 py-3">
                 {/* Logo */}
                 <div>
                     {mounted && (
-                        <Image
-                            src="/logo_2.png"
-                            alt="logo"
-                            width={124}
-                            height={64}
-                            priority
-                            className="m-2"
-                        />
+                        <Link href="/">
+                            <Image
+                                src="/logo_3.png"
+                                alt="logo"
+                                width={64}
+                                height={64}
+                                priority
+                                className="m-2"
+                            />
+                        </Link>
                     )}
                 </div>
 
@@ -73,7 +74,6 @@ export default function TheNavbar() {
 
                 {/* Language + Theme + Mobile Toggle */}
                 <div className="flex flex-row items-center gap-4">
-                    <LanguageSelector />
                     <ThemeToggle />
 
                     {/* Hamburger button for mobile */}

@@ -1,4 +1,4 @@
-
+import pkg from "../../../../package.json"
 
 export default function TheFooter() {
     return (
@@ -6,16 +6,16 @@ export default function TheFooter() {
             <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
                 {/* Left: Company Info */}
                 <div className="flex flex-col items-center md:items-start text-center md:text-left gap-1">
-                    <span>© 2025 Festariaa holidays</span>
+                    <span>© 2025 Festiraa holidays | v{pkg.version}</span>
                     <span>All rights reserved.</span>
                     <span className="text-xs">
-            pune-413004
-          </span>
+                        pune-413004
+                      </span>
                     <span className="text-xs">
-            Email: <a className="underline"
-                      href="mailto:festiraaholidays@outlook.com">festiraaholidays@outlook.com</a> | Phone: <a
-                        className="underline" href="tel:+917798619709">+91 77986 19709</a>
-          </span>
+                        Email: <a className="underline"
+                                  href="mailto:festiraaholidays@outlook.com">festiraaholidays@outlook.com</a> | Phone: <a
+                        className="underline" href="tel:+918263829207">+91 82638 29207</a>
+                     </span>
                 </div>
 
                 {/* Right: Developer Info */}

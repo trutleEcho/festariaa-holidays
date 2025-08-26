@@ -32,7 +32,7 @@ export default function AboutCard() {
                 <div className="w-full md:w-1/3 flex justify-center">
                     <Image
                         src="/logo.png"
-                        alt="Festariaa Logo"
+                        alt="Festiraa Logo"
                         width={200}
                         height={200}
                         className="rounded-xl object-contain"
@@ -48,7 +48,7 @@ export default function AboutCard() {
             <Separator className="my-4" />
 
             <CardFooter className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
-                <span>© {new Date().getFullYear()} Festariaa holidays</span>
+                <span>© {new Date().getFullYear()} Festiraa holidays</span>
                 {/*<div className="flex items-center gap-2">*/}
                 {/*    <span>Developed by</span>*/}
                 {/*    <Image*/}
