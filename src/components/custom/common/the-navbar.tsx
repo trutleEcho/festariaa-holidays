@@ -4,7 +4,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import { Separator } from "@/components/ui/separator";
 import { useTranslation } from "react-i18next";
 import { ThemeToggle } from "@/components/custom/common/theme-toggle";
 import { Menu, X } from "lucide-react"; // icons
@@ -26,7 +25,7 @@ export default function TheNavbar() {
     ];
 
     return (
-        <header className="sticky top-0 z-50 bg-background/50 shadow-sm">
+        <header className="absolute left-0 right-0 top-0 z-50 bg-gradient-to-b from-background/20 to-background/10 shadow-sm">
             <section className="w-full flex flex-row justify-between items-center px-5 py-3">
                 {/* Logo */}
                 <div>
@@ -35,8 +34,8 @@ export default function TheNavbar() {
                             <Image
                                 src="/logo_3.png"
                                 alt="logo"
-                                width={64}
-                                height={64}
+                                width={32}
+                                height={32}
                                 priority
                                 className="m-2"
                             />
@@ -45,7 +44,7 @@ export default function TheNavbar() {
                 </div>
 
                 {/* Desktop Nav */}
-                <nav className="hidden md:flex">
+                <nav className="hidden md:flex border-none">
                     <ul className="flex flex-row items-center gap-6">
                         {navLinks.map((link) => {
                             const isActive = pathname === link.href;
@@ -56,7 +55,7 @@ export default function TheNavbar() {
                                         className={`group relative px-2 py-2 text-base font-medium transition-colors duration-300 ${
                                             isActive
                                                 ? "text-primary font-semibold"
-                                                : "text-muted-foreground"
+                                                : "text-muted-background"
                                         }`}
                                     >
                                         {link.label}
@@ -85,8 +84,6 @@ export default function TheNavbar() {
                     </button>
                 </div>
             </section>
-
-            <Separator className="w-[95%] mx-auto" />
 
             {/* Mobile Menu */}
             {mobileMenuOpen && (

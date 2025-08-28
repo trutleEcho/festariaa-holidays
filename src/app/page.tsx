@@ -3,6 +3,7 @@ import TheFooter from "@/components/custom/common/the-footer";
 import DashboardBanner from "@/components/custom/dashboard/dashboard-banner";
 import JourneyFlowVertical from "@/components/custom/dashboard/journey-flow-vertical";
 import FooterCard from "@/components/custom/dashboard/footer-card";
+import TestimonialSection from "@/components/custom/dashboard/testimonial-section";
 
 export default function Home() {
 
@@ -12,6 +13,7 @@ export default function Home() {
           <TheNavbar/>
           <DashboardBanner/>
           {/*<VehiclesSection/>*/}
+          <TestimonialSection/>
           <JourneyFlowVertical/>
           <FooterCard/>
           {/*<ContactCornerSoftwares/>*/}
