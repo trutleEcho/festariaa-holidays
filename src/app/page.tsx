@@ -4,6 +4,8 @@ import DashboardBanner from "@/components/custom/dashboard/dashboard-banner";
 import JourneyFlowVertical from "@/components/custom/dashboard/journey-flow-vertical";
 import FooterCard from "@/components/custom/dashboard/footer-card";
 import TestimonialSection from "@/components/custom/dashboard/testimonial-section";
+import PlansSection from "@/components/custom/dashboard/plans-section";
+import ContactSection from "@/components/custom/dashboard/contact-section";
 
 export default function Home() {
 
@@ -13,7 +15,8 @@ export default function Home() {
           <DashboardBanner/>
           <div className="relative">
               <TheNavbar/>
-              {/*<VehiclesSection/>*/}
+              <PlansSection/>
+              <ContactSection/>
               <TestimonialSection/>
               <JourneyFlowVertical/>
               <FooterCard/>
