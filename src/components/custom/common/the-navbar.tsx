@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { ThemeToggle } from "@/components/custom/common/theme-toggle";
-import { Menu, X } from "lucide-react"; // icons
+import { Menu, X } from "lucide-react";
 
 export default function TheNavbar() {
     const [mounted, setMounted] = useState(false);
@@ -25,8 +25,8 @@ export default function TheNavbar() {
     ];
 
     return (
-        <header className="absolute left-0 right-0 top-0 z-50 bg-gradient-to-b from-background/20 to-background/10 shadow-sm">
-            <section className="w-full flex flex-row justify-between items-center px-5 py-3">
+        <header className="sticky left-0 right-0 top-0 z-50 flex justify-center items-center">
+            <section className="w-[95vw] flex flex-row justify-between items-center px-5 py-3 bg-transparent backdrop-blur-xs shadow-sm m-4 rounded-full">
                 {/* Logo */}
                 <div>
                     {mounted && (
@@ -55,7 +55,7 @@ export default function TheNavbar() {
                                         className={`group relative px-2 py-2 text-base font-medium transition-colors duration-300 ${
                                             isActive
                                                 ? "text-primary font-semibold"
-                                                : "text-muted-background"
+                                                : "text-muted-foreground"
                                         }`}
                                     >
                                         {link.label}
@@ -71,12 +71,11 @@ export default function TheNavbar() {
                     </ul>
                 </nav>
 
-                {/* Language + Theme + Mobile Toggle */}
+                {/* Theme + Mobile Toggle */}
                 <div className="flex flex-row items-center gap-4">
                     <ThemeToggle />
-
-                    {/* Hamburger button for mobile */}
                     <button
+                        aria-label="Toggle menu"
                         className="md:hidden p-2 rounded-lg hover:bg-accent"
                         onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                     >
@@ -87,7 +86,7 @@ export default function TheNavbar() {
 
             {/* Mobile Menu */}
             {mobileMenuOpen && (
-                <div className="md:hidden bg-background border-t border-border px-5 py-4 animate-slideDown">
+                <div className="absolute top-[80px] w-[90vw] bg-background/95 backdrop-blur-md border border-border rounded-xl px-5 py-6 md:hidden shadow-lg animate-fadeIn">
                     <ul className="flex flex-col gap-4">
                         {navLinks.map((link) => {
                             const isActive = pathname === link.href;

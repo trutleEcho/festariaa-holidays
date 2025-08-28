@@ -37,6 +37,10 @@
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
   --destructive-foreground: hsl(0 0% 100%);
+  --sb-track-color: #f5faff;
+  --sb-thumb-color: #5299e0;
+  --sb-thumb-hover: #3a7cc1; /* darker on hover */
+  --sb-size: 2px; /* slightly wider for usability */
 }
 
 .dark {
@@ -72,6 +76,10 @@
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
   --destructive-foreground: hsl(0 0% 100%);
+  --sb-track-color: #f5faff;
+  --sb-thumb-color: #5299e0;
+  --sb-thumb-hover: #3a7cc1; /* darker on hover */
+  --sb-size: 2px; /* slightly wider for usability */
 }
 
 @theme inline {
@@ -111,6 +119,9 @@
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
   --color-destructive-foreground: var(--destructive-foreground);
+  --sb-size: var(--sb-size);
+  --sb-track-color: var(--sb-track-color);
+  --sb-thumb-color: var(--sb-thumb-color);
 }
 
 @layer base {
@@ -142,40 +153,43 @@
   animation: gradient-move 40s ease-in-out infinite;
 }
 
-/* For Chrome, Edge, Safari */
-::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+/* For Chrome, Safari, Edge (WebKit browsers) */
+body::-webkit-scrollbar {
+  width: var(--sb-size);
+  height: var(--sb-size);
 }
 
-::-webkit-scrollbar-track {
-  background: transparent; /* or use a light/dark tone */
+body::-webkit-scrollbar-button:start:decrement,
+body::-webkit-scrollbar-button:end:increment,
+body::-webkit-scrollbar-button:single-button {
+  display: none;
+  width: 0;
+  height: 0;
 }
 
-::-webkit-scrollbar-thumb {
-  background-color: rgba(100, 100, 100, 0.5);
-  border-radius: 8px;
-  border: 2px solid transparent;
-  background-clip: content-box;
-  transition: background-color 0.3s;
+body::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+  border-radius: 4px;
 }
 
-::-webkit-scrollbar-thumb:hover {
-  background-color: rgba(100, 100, 100, 0.8);
+body::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 4px;
+  transition: background 0.3s ease;
 }
 
-@media (prefers-color-scheme: dark) {
-  ::-webkit-scrollbar-thumb {
-    background-color: rgba(200, 200, 200, 0.3);
-  }
-
-  ::-webkit-scrollbar-thumb:hover {
-    background-color: rgba(200, 200, 200, 0.5);
-  }
+body::-webkit-scrollbar-thumb:hover {
+  background: var(--sb-thumb-hover);
 }
 
 /* For Firefox */
-html {
+body {
+  scrollbar-width: thin; /* auto | thin | none */
+  scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+}
+
+/* Optional: Apply to all scrollable elements */
+* {
   scrollbar-width: thin;
-  scrollbar-color: rgba(100, 100, 100, 0.5) transparent;
+  scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
 }

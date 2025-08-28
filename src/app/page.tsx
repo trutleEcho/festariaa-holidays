@@ -10,14 +10,16 @@ export default function Home() {
     return (
     <>
       <section className="w-screen h-full flex flex-col justify-between overflow-x-hidden">
-          <TheNavbar/>
           <DashboardBanner/>
-          {/*<VehiclesSection/>*/}
-          <TestimonialSection/>
-          <JourneyFlowVertical/>
-          <FooterCard/>
-          {/*<ContactCornerSoftwares/>*/}
-          <TheFooter/>
+          <div className="relative">
+              <TheNavbar/>
+              {/*<VehiclesSection/>*/}
+              <TestimonialSection/>
+              <JourneyFlowVertical/>
+              <FooterCard/>
+              {/*<ContactCornerSoftwares/>*/}
+              <TheFooter/>
+          </div>
       </section>
     </>
   );
