@@ -6,6 +6,7 @@ import FooterCard from "@/components/custom/dashboard/footer-card";
 import TestimonialSection from "@/components/custom/dashboard/testimonial-section";
 import PlansSection from "@/components/custom/dashboard/plans-section";
 import ContactSection from "@/components/custom/dashboard/contact-section";
+import PackagesSection from "@/components/custom/dashboard/packages-section";
 
 export default function Home() {
 
@@ -15,6 +16,7 @@ export default function Home() {
           <DashboardBanner/>
           <div className="relative">
               <TheNavbar/>
+              <PackagesSection/>
               <PlansSection/>
               <ContactSection/>
               <TestimonialSection/>

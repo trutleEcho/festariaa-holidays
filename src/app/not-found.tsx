@@ -28,16 +28,8 @@ export default function NotFound() {
                     <CardTitle className="flex justify-center">
                         <Image
                             className="dark:hidden w-auto max-w-[70%] sm:max-w-[250px]"
-                            src="/Festiraa_TnT_LIGHT_LABLE.svg"
-                            alt="Label"
-                            width={250}
-                            height={200}
-                            priority
-                        />
-                        <Image
-                            className="hidden dark:block w-auto max-w-[70%] sm:max-w-[250px]"
-                            src="/Festiraa_TnT_DARK_LABLE.svg"
-                            alt="Label"
+                            src="/logo.png"
+                            alt="Logo"
                             width={250}
                             height={200}
                             priority
@@ -65,38 +57,38 @@ export default function NotFound() {
                         <span className="font-semibold">Note:</span> This page is a work in progress.
                     </p>
 
-                    <Card className="w-full bg-transparent border-none text-muted-foreground text-sm">
-                        <CardHeader>
-                            <CardDescription className="flex flex-col sm:flex-row sm:items-center justify-center gap-3 text-center">
-                                <span className="font-semibold">Powered by:</span>
-                                <div className="flex items-center gap-3 justify-center">
-                                    <Image
-                                        src="/CORSW_BG_LIGHT_64x64.svg"
-                                        alt="Corner Softwares"
-                                        width={32}
-                                        height={32}
-                                        className="block dark:hidden"
-                                    />
-                                    <Image
-                                        src="/CORSW_BG_DARK_64x64.svg"
-                                        alt="Corner Softwares"
-                                        width={32}
-                                        height={32}
-                                        className="hidden dark:block"
-                                    />
-                                    <Link
-                                        href="https://github.com/vercel/next.js/tree/canary/examples/with-tailwindcss"
-                                        target="_blank"
-                                        rel="noreferrer"
-                                    >
-                    <span className="underline font-semibold hover:text-foreground">
-                      Corner Softwares
-                    </span>
-                                    </Link>
-                                </div>
-                            </CardDescription>
-                        </CardHeader>
-                    </Card>
+                    {/*<Card className="w-full bg-transparent border-none text-muted-foreground text-sm">*/}
+                    {/*    <CardHeader>*/}
+                    {/*        <CardDescription className="flex flex-col sm:flex-row sm:items-center justify-center gap-3 text-center">*/}
+                    {/*            <span className="font-semibold">Powered by:</span>*/}
+                    {/*            <div className="flex items-center gap-3 justify-center">*/}
+                    {/*                <Image*/}
+                    {/*                    src="/CORSW_BG_LIGHT_64x64.svg"*/}
+                    {/*                    alt="Corner Softwares"*/}
+                    {/*                    width={32}*/}
+                    {/*                    height={32}*/}
+                    {/*                    className="block dark:hidden"*/}
+                    {/*                />*/}
+                    {/*                <Image*/}
+                    {/*                    src="/CORSW_BG_DARK_64x64.svg"*/}
+                    {/*                    alt="Corner Softwares"*/}
+                    {/*                    width={32}*/}
+                    {/*                    height={32}*/}
+                    {/*                    className="hidden dark:block"*/}
+                    {/*                />*/}
+                    {/*                <Link*/}
+                    {/*                    href="https://github.com/vercel/next.js/tree/canary/examples/with-tailwindcss"*/}
+                    {/*                    target="_blank"*/}
+                    {/*                    rel="noreferrer"*/}
+                    {/*                >*/}
+                    {/*<span className="underline font-semibold hover:text-foreground">*/}
+                    {/*  Corner Softwares*/}
+                    {/*</span>*/}
+                    {/*                </Link>*/}
+                    {/*            </div>*/}
+                    {/*        </CardDescription>*/}
+                    {/*    </CardHeader>*/}
+                    {/*</Card>*/}
                 </CardFooter>
             </Card>
         </section>
