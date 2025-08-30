@@ -22,7 +22,7 @@ export default function TestimonialSection() {
                         {/* Background Video */}
                         <video
                             className="absolute inset-0 w-full h-full object-cover"
-                            src="/tours/monk-vid.mp4"
+                            src="https://cdn.pixabay.com/video/2025/08/11/296705_large.mp4"
                             autoPlay
                             muted
                             loop

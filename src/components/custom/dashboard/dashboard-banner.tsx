@@ -17,7 +17,7 @@ export default function DashboardBanner() {
                 {/* Background video */}
                 <video
                     className="absolute inset-0 w-full h-full object-cover -z-10 rounded-2xl"
-                    src="/hero-vid.mp4"
+                    src="https://cdn.pixabay.com/video/2025/03/29/268528_large.mp4"
                     autoPlay
                     loop
                     muted

@@ -90,10 +90,11 @@ export default function PlansSection() {
                         <div className="relative w-full h-[250px] md:h-[500px]">
                             <video
                                 className="absolute inset-0 w-full h-full object-cover"
-                                src="/tours/festiraa_kerla_vid.mp4"
+                                src="https://ygojvf8zbta1ooiv.public.blob.vercel-storage.com/festiraa_kerla_vid.mp4"
                                 controls
                                 loop
                                 playsInline
+                                preload="none"
                             />
                             <div className="absolute top-6 left-4 flex flex-col items-start gap-2">
                                 <span className="text-white text-lg md:text-2xl font-bold">

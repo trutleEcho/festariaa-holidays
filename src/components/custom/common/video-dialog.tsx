@@ -61,6 +61,7 @@ export default function VideoDialog({
                     src={videoUrl}
                     controls
                     autoPlay
+                    preload="none"
                     playsInline
                     className="w-full h-[90vh] rounded-lg"
                 />

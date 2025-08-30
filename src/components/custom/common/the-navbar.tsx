@@ -26,9 +26,9 @@ export default function TheNavbar() {
 
     return (
         <header className="sticky left-0 right-0 top-0 z-50 flex justify-center items-center">
-            <section className="w-[95vw] flex flex-row justify-between items-center px-5 py-3 bg-transparent backdrop-blur-xs shadow-sm m-4 rounded-full">
+            <section className="w-[95vw] flex flex-row justify-between items-center px-5 py-3 backdrop-blur-xs shadow-sm m-4 rounded-full bg-primary/50">
                 {/* Logo */}
-                <div>
+                <div className="bg-white rounded-full">
                     {mounted && (
                         <Link href="/">
                             <Image
@@ -55,7 +55,7 @@ export default function TheNavbar() {
                                         className={`group relative px-2 py-2 text-base font-medium transition-colors duration-300 ${
                                             isActive
                                                 ? "text-primary font-semibold"
-                                                : "text-muted-foreground"
+                                                : "text-foreground"
                                         }`}
                                     >
                                         {link.label}
