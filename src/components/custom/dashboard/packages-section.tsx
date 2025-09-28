@@ -94,7 +94,7 @@ export default function PackagesSection() {
                 >
                     <div className="flex gap-3 md:gap-4 flex-row items-center">
                         <VideoDialog
-                            videoUrl="https://ygojvf8zbta1ooiv.public.blob.vercel-storage.com/festiraa_kerla_vid.mp4"
+                            videoUrl="https://ygojvf8zbta1ooiv.public.blob.vercel-storage.com/kerala.mp4"
                             thumbnail="/tours/kerala_house_boat.png"
                             alt="Kerala Tour"
                         />

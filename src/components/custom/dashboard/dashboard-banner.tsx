@@ -1,12 +1,12 @@
 "use client";
 
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Separator } from "@/components/ui/separator";
+import {Card, CardContent, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
+import {Separator} from "@/components/ui/separator";
 import Image from "next/image";
-import { useTranslation } from "react-i18next";
+import {useTranslation} from "react-i18next";
 
 export default function DashboardBanner() {
-    const { t } = useTranslation("common");
+    const {t} = useTranslation("common");
 
     return (
         <main className="p-4">
@@ -25,7 +25,8 @@ export default function DashboardBanner() {
                 />
 
                 {/* Overlay card */}
-                <Card className="relative w-full max-w-5xl mx-4 sm:mx-6 md:mx-10 bg-primary-500/90 text-white dark:text-black rounded-2xl shadow-lg p-6 sm:p-10 border-none">
+                <Card
+                    className="relative w-full max-w-5xl mx-4 sm:mx-6 md:mx-10 bg-primary-500/90 text-white dark:text-black rounded-2xl shadow-lg p-6 sm:p-10 border-none">
                     <CardHeader className="pt-2 sm:pt-5">
                         <CardTitle className="flex justify-center">
                             <Image
@@ -48,15 +49,15 @@ export default function DashboardBanner() {
             <span className="block text-base sm:text-lg md:text-xl font-semibold mb-3 text-black dark:text-white">
               {t("banner.text4")}
             </span>
-                            {t("banner.text5")} <br />
-                            {t("banner.text6")} <br />
+                            {t("banner.text5")} <br/>
+                            {t("banner.text6")} <br/>
                             {t("banner.text7")}
                         </p>
                     </CardContent>
 
                     <CardFooter className="mt-8">
                         <div className="w-full">
-                            <Separator className="mb-4 bg-white/40 dark:bg-black/20" />
+                            <Separator className="mb-4 bg-white/40 dark:bg-black/20"/>
                             <p className="text-right text-sm sm:text-lg md:text-xl font-medium text-white dark:text-black">
                                 {t("banner.text3")}
                             </p>

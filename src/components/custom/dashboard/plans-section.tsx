@@ -90,7 +90,7 @@ export default function PlansSection() {
                         <div className="relative w-full h-[250px] md:h-[500px]">
                             <video
                                 className="absolute inset-0 w-full h-full object-cover"
-                                src="https://ygojvf8zbta1ooiv.public.blob.vercel-storage.com/festiraa_kerla_vid.mp4"
+                                src="https://ygojvf8zbta1ooiv.public.blob.vercel-storage.com/kerala.mp4"
                                 controls
                                 loop
                                 playsInline
