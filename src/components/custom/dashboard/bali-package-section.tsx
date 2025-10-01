@@ -2,7 +2,6 @@
 
 import {ArrowRight, GlassWater, Umbrella} from "lucide-react"
 import Link from "next/link"
-import VideoDialog from "@/components/custom/common/video-dialog"
 import { motion } from "framer-motion"
 
 export default function BaliPackagesSection() {
